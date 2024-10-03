@@ -39,7 +39,7 @@ def open_qucs_view(c):
     """
     Opens the QUCS application for a schematic view.
     """
-    command = ["qucs-s", os.path.join(QUCS_PATH, "stoper.sch")]
+    command = ["qucs-s", "-i", os.path.join(QUCS_PATH, "stoper.sch")]
 
     run_command(c, command)
 
@@ -47,7 +47,7 @@ def open_qucs_view(c):
 @task
 def open_kicad_view(c):
     """
-    Opens the QUCS application for a schematic view.
+    Opens the KICAD application for a PCB view.
     """
     command = ["kicad", os.path.join(KICAD_PATH, "stoper.kicad_pro")]
 
@@ -57,16 +57,6 @@ def open_kicad_view(c):
 ###############################################
 #                Pivate API                   #
 ###############################################
-
-
-def command_exists(command):
-    """
-    Check if a command exists in the system.
-
-    :param command: Command name as a string.
-    :return: True if the command exists, False otherwise.
-    """
-    return shutil.which(command) is not None
 
 
 def run_command(process, command_l):
@@ -101,3 +91,13 @@ def run_command(process, command_l):
     except UnexpectedExit:
         logging.error("Unable to run `%s`: %s" % (command, traceback.format_exc()))
         sys.exit(2)
+
+
+def command_exists(command):
+    """
+    Check if a command exists in the system.
+
+    :param command: Command name as a string.
+    :return: True if the command exists, False otherwise.
+    """
+    return shutil.which(command) is not None
