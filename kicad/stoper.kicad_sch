@@ -1619,7 +1619,7 @@
     (property "Value" "LED" (id 1) (at 107.95 118.4274 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "Button_Switch_THT:SW_PUSH_6mm" (id 2) (at 104.14 115.57 0)
+    (property "Footprint" "LED_THT:LED_D5.0mm" (id 2) (at 104.14 115.57 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 104.14 115.57 0)
@@ -2847,7 +2847,7 @@
       (reference "OnOff1") (unit 1) (value "NE555P") (footprint "Package_DIP:DIP-8_W7.62mm")
     )
     (path "/1b96be94-e01f-48ed-805c-c6c0db9e0f9e"
-      (reference "OnOffLed1") (unit 1) (value "LED") (footprint "Button_Switch_THT:SW_PUSH_6mm")
+      (reference "OnOffLed1") (unit 1) (value "LED") (footprint "LED_THT:LED_D5.0mm")
     )
     (path "/958e37ef-b599-4840-8e6d-586dd7ec27ce"
       (reference "PWR1") (unit 1) (value "Barrel_Jack") (footprint "Connector_BarrelJack:BarrelJack_GCT_DCJ200-10-A_Horizontal")
